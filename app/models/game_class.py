@@ -1,4 +1,6 @@
-class Game():
+class Game:
 
-    def __init__(self, game):
-        self.game = game
+    def __init__(self, outcome):
+        self.outcome = outcome
+
+    
