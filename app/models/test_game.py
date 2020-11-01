@@ -9,19 +9,18 @@ class TestGame(unittest.TestCase):
     def setUp(self):
         self.player_1 = Player("James", "Rock")
         self.player_2 = Player("Angela", "Scissors")
-    
-        self.outcome1wins = Game("Player 1 wins")
-        self.outcome2wins = Game("player 2 wins")
-        self.outcome3draw = Game("Draw!")
+        self.round_1 = Game(self.player_1, self.player_2)
 
-        self.outcomes = [self.outcome1wins, self.outcome2wins, self.outcome3draw]
+    def test_winner(self):
+        self.round_1.add_new_winner(self.player_1)
+        self.assertEqual(1, len(self.round_1.winner))
 
-    # def test_outcome(self):
-    #     # self.game.add_new_outcome(self.outcome1wins)
-    #     self.assertEqual(1, len(self.outcome1wins.outcome))
+    def test_who_has_won(self):
+        result = self.round_1.who_has_won(self.player_1, self.player_2)
+        self.assertEqual("player 1 wins", result)
     
-    def test_game_has_outcome(self):
-        self.assertEqual("Player 1 wins", self.outcome1wins.outcome)
+
+    
 
 
 
