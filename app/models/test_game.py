@@ -1,16 +1,15 @@
 import unittest
 from models.player_class import Player
 from models.game_class import Game
-# from models.game_function import * 
-# ^^is this * going import too much and break it?#
+
 
 class TestGame(unittest.TestCase):
 
     def setUp(self):
-        self.player_1 = Player("Rock")
-        self.player_2 = Player("Scissors")
-        self.player_3 = Player("Paper")
-        self.player_4 = Player("Rock")
+        self.player_1 = Player("Tom", "Rock")
+        self.player_2 = Player("Dick", "Scissors")
+        self.player_3 = Player("Harry", "Paper")
+        self.player_4 = Player("Jane", "Rock")
         self.round_1 = Game(self.player_1, self.player_2)
         self.round_2 = Game(self.player_1, self.player_3)
         self.round_3 = Game(self.player_1, self.player_4)
