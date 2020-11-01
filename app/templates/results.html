@@ -4,8 +4,12 @@
     </head>
     <body>
         {% block content %}
-           {% if result == None %}
-                {{result.player_name}}
+
+        {% if result == None %}
+           <p>You draw!</p>
+            {% else %}
+                <p>{{result.player_name}} wins!</p>
+            {% endif %}
     
             
         {% endblock %}
