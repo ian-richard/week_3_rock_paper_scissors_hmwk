@@ -7,10 +7,10 @@ from models.game_class import Game
 class TestGame(unittest.TestCase):
 
     def setUp(self):
-        self.player_1 = Player("James", "Rock")
-        self.player_2 = Player("Angela", "Scissors")
-        self.player_3 = Player("Terry", "Paper")
-        self.player_4 = Player("Stoyan", "Rock")
+        self.player_1 = Player("Rock")
+        self.player_2 = Player("Scissors")
+        self.player_3 = Player("Paper")
+        self.player_4 = Player("Rock")
         self.round_1 = Game(self.player_1, self.player_2)
         self.round_2 = Game(self.player_1, self.player_3)
         self.round_3 = Game(self.player_1, self.player_4)
