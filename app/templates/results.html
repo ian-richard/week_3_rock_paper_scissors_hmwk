@@ -1,17 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Result</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <title>Welcome</title>
     </head>
     <body>
+        <section><div class="a">
+            
+        
         {% block content %}
 
         {% if result == None %}
-           <p>You draw!</p>
+           <h4>You draw!</h4>
             {% else %}
                 <p>{{result.player_name}} wins!</p>
             {% endif %}
     
             
         {% endblock %}
+        
+        </div></section>
     </body>
 </html>
